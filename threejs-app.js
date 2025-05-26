@@ -1,154 +1,157 @@
 // threejs-app.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Background Animation
-    initBackground();
+    // First check if WebGL is supported
+    if (!isWebGLAvailable()) {
+        console.warn('WebGL not supported - disabling 3D effects');
+        document.getElementById('threejs-bg').style.display = 'none';
+        return;
+    }
     
-    // Hero Section Animation
-    initHeroAnimation();
+    // Initialize Three.js effects
+    initBackground();
+    initScrollAnimation();
 });
 
+// WebGL availability check
+function isWebGLAvailable() {
+    try {
+        const canvas = document.createElement('canvas');
+        return !!(
+            window.WebGLRenderingContext && 
+            (canvas.getContext('webgl') || 
+            canvas.getContext('experimental-webgl'))
+        );
+    } catch (e) {
+        return false;
+    }
+}
+
+// Background Particle System
 function initBackground() {
-    const container = document.getElementById('threejs-container');
+    const container = document.getElementById('threejs-bg');
     
     // Scene setup
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    const camera = new THREE.PerspectiveCamera(
+        75, 
+        window.innerWidth / window.innerHeight, 
+        0.1, 
+        1000
+    );
+    camera.position.z = 5;
+
+    const renderer = new THREE.WebGLRenderer({ 
+        alpha: true,
+        antialias: true
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
-    
-    // Particles
+
+    // Create particle geometry
     const particlesGeometry = new THREE.BufferGeometry();
-    const particleCount = 1000;
+    const particleCount = 1500;
     
+    // Position and color arrays
     const posArray = new Float32Array(particleCount * 3);
+    const colorArray = new Float32Array(particleCount * 3);
+    
+    // Fill arrays with random values
     for(let i = 0; i < particleCount * 3; i++) {
-        posArray[i] = (Math.random() - 0.5) * 10;
+        posArray[i] = (Math.random() - 0.5) * 20;
+        
+        // Make some particles golden (primary color)
+        if (i % 3 === 0 && Math.random() > 0.7) {
+            colorArray[i] = 1.0;     // R
+            colorArray[i+1] = 0.72;  // G
+            colorArray[i+2] = 0.26;  // B
+        } else {
+            colorArray[i] = Math.random();
+        }
     }
     
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    
+    // Set geometry attributes
+    particlesGeometry.setAttribute(
+        'position', 
+        new THREE.BufferAttribute(posArray, 3)
+    );
+    particlesGeometry.setAttribute(
+        'color', 
+        new THREE.BufferAttribute(colorArray, 3)
+    );
+
+    // Particle material
     const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.02,
-        color: 0xffb742,
+        size: 0.1,
+        vertexColors: true,
         transparent: true,
-        opacity: 0.8
+        opacity: 0.8,
+        blending: THREE.AdditiveBlending,
+        sizeAttenuation: true
     });
-    
-    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+
+    // Create particle system
+    const particlesMesh = new THREE.Points(
+        particlesGeometry, 
+        particlesMaterial
+    );
     scene.add(particlesMesh);
+
+    // Mouse interaction variables
+    let mouseX = 0;
+    let mouseY = 0;
+    const mouseMoveSpeed = 0.0002;
     
-    camera.position.z = 3;
-    
+    // Handle mouse movement
+    document.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+    });
+
     // Animation loop
     function animate() {
         requestAnimationFrame(animate);
-        particlesMesh.rotation.x += 0.0005;
-        particlesMesh.rotation.y += 0.0005;
+        
+        // Particle animation
+        particlesMesh.rotation.x += 0.0003 + (mouseY * mouseMoveSpeed);
+        particlesMesh.rotation.y += 0.0003 + (mouseX * mouseMoveSpeed);
+        
+        // Mouse follow effect (subtle)
+        camera.position.x += (mouseX * 3 - camera.position.x) * 0.01;
+        camera.position.y += (mouseY * 3 - camera.position.y) * 0.01;
+        camera.lookAt(scene.position);
+        
         renderer.render(scene, camera);
     }
     
-    animate();
-    
-    // Handle resize
-    window.addEventListener('resize', () => {
+    // Handle window resize
+    function handleResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
-    });
+    }
+    
+    window.addEventListener('resize', handleResize);
+    
+    // Start animation
+    animate();
 }
 
-function initHeroAnimation() {
-    const container = document.getElementById('threejs-hero');
-    
-    // Scene setup
-    const scene = new THREE.Scene();
-    scene.background = null;
-    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
-    container.appendChild(renderer.domElement);
-    
-    // Add lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
-    
-    const directionalLight = new THREE.DirectionalLight(0xffb742, 1);
-    directionalLight.position.set(1, 1, 1);
-    scene.add(directionalLight);
-    
-    // Create 3D text
-    const loader = new THREE.FontLoader();
-    loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function(font) {
-        const textGeometry = new THREE.TextGeometry('DEV', {
-            font: font,
-            size: 1,
-            height: 0.2,
-            curveSegments: 12,
-            bevelEnabled: true,
-            bevelThickness: 0.03,
-            bevelSize: 0.02,
-            bevelOffset: 0,
-            bevelSegments: 5
+// Scroll-triggered animation elements
+function initScrollAnimation() {
+    // Create observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
         });
-        
-        textGeometry.center();
-        
-        const textMaterial = new THREE.MeshPhongMaterial({ 
-            color: 0xffb742,
-            specular: 0x111111,
-            shininess: 30
-        });
-        
-        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-        scene.add(textMesh);
-        
-        // Add floating cubes
-        const cubes = [];
-        const cubeGeometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
-        const cubeMaterial = new THREE.MeshPhongMaterial({
-            color: 0xffffff,
-            transparent: true,
-            opacity: 0.7
-        });
-        
-        for(let i = 0; i < 10; i++) {
-            const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-            cube.position.x = (Math.random() - 0.5) * 4;
-            cube.position.y = (Math.random() - 0.5) * 4;
-            cube.position.z = (Math.random() - 0.5) * 4;
-            cube.rotation.x = Math.random() * Math.PI;
-            cube.rotation.y = Math.random() * Math.PI;
-            cubes.push({
-                mesh: cube,
-                speed: Math.random() * 0.02 + 0.01
-            });
-            scene.add(cube);
-        }
-        
-        camera.position.z = 5;
-        
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            
-            textMesh.rotation.y += 0.01;
-            
-            cubes.forEach(cube => {
-                cube.mesh.rotation.x += cube.speed;
-                cube.mesh.rotation.y += cube.speed;
-            });
-            
-            renderer.render(scene, camera);
-        }
-        
-        animate();
+    }, {
+        threshold: 0.1
     });
-    
-    // Handle resize
-    window.addEventListener('resize', () => {
-        camera.aspect = container.offsetWidth / container.offsetHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+
+    // Observe all sections with data-animate attribute
+    document.querySelectorAll('[data-animate]').forEach(section => {
+        observer.observe(section);
     });
 }
