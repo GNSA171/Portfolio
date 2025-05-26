@@ -10,6 +10,7 @@
 body{
   height: 100vh;
   background: #212529;
+  position: relative;
 }
 
 .navbar{
@@ -65,6 +66,7 @@ body{
 .main{
     height: 640px;
     display: flex;
+    background-color: transparent;
     flex-direction: column;
     align-items: center;    
     position: relative;
