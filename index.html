@@ -5,28 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>My Portfolio</title>
-   </head>
+    <title>Geeth Namal | Fullstack Developer</title>
+</head>
 
 <body>
+    <!-- Three.js Canvas Container -->
+    <div id="threejs-container"></div>
 
     <div class="navbar">
-        <h2>ProPulse Dev</h2>
+        <h2>Geeth Namal</h2>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
         <button class="hire-btn">Hire Me</button>
     </div>
 
-    <div class="main">
-        <h4>Hi, I Am <span>Geeth Namal</span> 👋</h4>
-        <p class="title">Creative Fullstack Web Developer</p>
-        <p class="subtitle">Crafting Digital Dreams: The Elegant Symphony of a Web Developer's Code</p>
-        <img src="logo.png">
+    <!-- Main Section with 3D Animation -->
+    <div class="main" id="home">
+        <div class="hero-content">
+            <h4>Hi, I Am <span>Geeth Namal</span> 👋</h4>
+            <p class="title">Creative Fullstack Developer</p>
+            <p class="subtitle">Crafting Digital Dreams with Code & Creativity</p>
+            <div class="cta-buttons">
+                <button class="portfolio-btn">View Portfolio</button>
+                <button class="contact-btn">Contact Me</button>
+            </div>
+        </div>
+        <div id="threejs-hero"></div>
     </div>
     
 
@@ -168,9 +177,10 @@
 
     </div>
 </footer>
- <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/examples/js/loaders/FontLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/examples/js/geometries/TextGeometry.js"></script>
-  <script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="threejs-app.js"></script>
 </body>
 </html>
+
