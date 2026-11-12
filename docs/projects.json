@@ -1,0 +1,115 @@
+[
+  {
+    "id": "ceylondrive",
+    "name": "CeylonDrive",
+    "url": "https://ceylondrive.com/",
+    "status": "production",
+    "category": "Travel & transport",
+    "image": "ceylondrive-preview.jpg",
+    "description": "A Sri Lankan travel platform connecting visitors with private chauffeur services, airport transfers, tour guides, vehicles, and destination information.",
+    "features": "Tour and transfer discovery, fleet and guide listings, journey enquiry, and an itinerary-planning interface.",
+    "tech": [
+      "PHP routes",
+      "Bootstrap",
+      "jQuery",
+      "Google Maps"
+    ],
+    "note": "Public pages expose PHP routes and load Bootstrap, jQuery, and Google Maps. Internal services and booking operations were not audited."
+  },
+  {
+    "id": "blacksoul",
+    "name": "Black Soul",
+    "url": "https://blacksoul.lk/",
+    "status": "production",
+    "category": "Streetwear & music",
+    "image": "blacksoul-preview.jpg",
+    "description": "A distinctive streetwear and music storefront combining merchandise discovery with an artist-led brand experience.",
+    "features": "Featured clothing collections, shopping navigation, music presentation, and brand storytelling.",
+    "tech": [
+      "Next.js",
+      "React",
+      "Vercel"
+    ],
+    "note": "Next.js assets and hosting headers are visible on the public deployment. Database, payment provider, and internal architecture are not claimed."
+  },
+  {
+    "id": "vellora",
+    "name": "Vellora Fashion",
+    "url": "https://vellorafashion.online/",
+    "status": "production",
+    "category": "Fashion & lifestyle",
+    "image": "vellora-preview.jpg",
+    "description": "A fashion and lifestyle storefront with a curated visual identity spanning apparel, beauty, accessories, and editorial content.",
+    "features": "Collection discovery, catalog navigation, search entry, wishlist and shopping-bag interfaces.",
+    "tech": [
+      "Next.js",
+      "React",
+      "Vercel"
+    ],
+    "note": "The public site serves Next.js assets. Store administration, checkout, and payment processing were not tested."
+  },
+  {
+    "id": "kasagala-yba",
+    "name": "Kasagala Young Buddhist Association",
+    "url": "https://kasagala-yba.vercel.app/",
+    "status": "development",
+    "category": "Community & nonprofit",
+    "image": "kasagala-yba-preview.jpg",
+    "description": "A community website for the Kasagala Young Buddhist Association, presenting its mission, charitable activities, programmes, and ways to participate.",
+    "features": "Sinhala-led content, language choices, programme sections, membership entry points, and donation information.",
+    "tech": [
+      "React",
+      "Vite",
+      "Vercel"
+    ],
+    "note": "React and Vite markers are present in the public bundle. This is a development preview; membership and donation workflows were not exercised."
+  },
+  {
+    "id": "ceylonctours",
+    "name": "Ceylon C Tours",
+    "url": "https://ceylonctours.netlify.app/",
+    "status": "development",
+    "category": "Chauffeur & tour services",
+    "image": "ceylonctours-preview.jpg",
+    "description": "A chauffeur and car-rental website presenting Sri Lankan travel services, a vehicle fleet, and a clear path to ride enquiries.",
+    "features": "Fleet discovery, service information, tour navigation, and booking calls to action.",
+    "tech": [
+      "Next.js",
+      "React",
+      "Netlify"
+    ],
+    "note": "Next.js assets are visible on the Netlify preview. This is listed as development work, rather than a production booking service."
+  },
+  {
+    "id": "3s3d",
+    "name": "3S 3D Engineering Service",
+    "url": "https://3s3d.netlify.app/",
+    "status": "development",
+    "category": "Architecture & visualization",
+    "image": "3s3d-preview.jpg",
+    "description": "A visual business website for architectural visualization and engineering services, built around project presentation and enquiry.",
+    "features": "Architectural visualization, BIM and consultation service sections, a project gallery, and contact calls to action.",
+    "tech": [
+      "Next.js",
+      "React",
+      "Netlify"
+    ],
+    "note": "Next.js assets are visible in the public deployment. Architectural work, awards, and business claims belong to the showcased organization; they are not developer credentials."
+  },
+  {
+    "id": "facebook-scheduler",
+    "name": "Facebook Post Scheduler",
+    "url": "https://facebookpostscheduler.vercel.app/",
+    "status": "development",
+    "category": "Social media workflow",
+    "image": "facebook-scheduler-preview.jpg",
+    "description": "A social media scheduling application in development, exploring a dashboard-led workflow for content planning and AI-assisted social tools.",
+    "features": "A public product overview and dashboard entry, presenting scheduling, analytics, and AI feature concepts.",
+    "tech": [
+      "Next.js",
+      "React",
+      "Vercel"
+    ],
+    "note": "Next.js assets are visible. Automated posting, AI services, analytics accuracy, Meta approval, and advertised security controls were not verified."
+  }
+]
