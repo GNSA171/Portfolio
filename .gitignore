@@ -1,0 +1,4 @@
+# Local preview and deployment staging
+.openai/
+dist/
+_site/
