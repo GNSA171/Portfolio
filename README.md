@@ -1,43 +1,61 @@
-# Geeth Namal — Portfolio
+# Geeth Namal — Professional Portfolio
 
-A responsive freelance portfolio for Geeth Namal, built with HTML, CSS, and JavaScript for GitHub Pages. It showcases three production websites, four development previews, and the confirmed contact email dkgnsa171@gmail.com.
+A modern, responsive portfolio for **Geeth Namal**, Software Engineer & Systems Architect based in Sri Lanka. Engineered with vanilla HTML, CSS, and JavaScript for GitHub Pages deployment with zero build steps or npm dependencies.
 
-**Live URL:** https://gnsa171.github.io/Portfolio/
+**Live URL:** [https://gnsa171.github.io/Portfolio/](https://gnsa171.github.io/Portfolio/)
 
-## Run locally
+---
 
-Open `index.html` directly, or serve the repository with a static server:
+## Architecture & Project Structure
 
-```bash
+- **`index.html`**: Production portfolio shell, responsive hero, project showcases, service offerings, engineering bio, and contact brief form.
+- **`style.css`**: Design system tokens, layout grid, system preview terminal styling, responsive media queries, and accessible focus states.
+- **`main.js`**: Interactive project filtering across categories, clipboard copy utility, and mailto draft launcher.
+- **`assets/images/profile.png`**: Portrait asset.
+- **`assets/previews/`**: Public homepage preview captures for web projects.
+- **`docs/projects.json`**: Verified technical inventory covering all 13 projects with architecture notes and stack specifications.
+- **`docs/FREELANCE-PROFILE.md`**: Client-facing technical profile, service descriptions, and engagement scopes.
+- **`docs/GITHUB-PROFILE-README.md`**: Profile README designed for `GNSA171/GNSA171`.
+
+---
+
+## Local Development
+
+Preview the portfolio locally by opening `index.html` directly or starting a local static server:
+
+```powershell
 python -m http.server 8080
 ```
 
-Then open http://localhost:8080. No dependencies or build step are needed.
+Then visit [http://localhost:8080](http://localhost:8080).
 
-## Edit
+---
 
-- `index.html`: profile text, services, projects, contact email, and page metadata.
-- `style.css`: layout, colours, typography, and responsive styles.
-- `main.js`: copy-email interaction, email draft generation, and current year.
-- `assets/images/profile.png`: existing portrait.
-- `assets/previews/`: seven public homepage screenshots.
-- `docs/projects.json`: project inventory with descriptions, status, and technology notes.
-- `docs/PROJECT-EVIDENCE.md`: technology verification boundaries.
-- `docs/FREELANCE-PROFILE.md`: reusable freelance overview, headline, bio, and service copy.
-- `docs/GITHUB-PROFILE-README.md`: README intended for the `GNSA171/GNSA171` profile repository.
+## Deployment (GitHub Pages)
 
-The contact address appears in `index.html`, `main.js`, and the profile documents. Update all occurrences together.
+The repository uses GitHub Actions (`.github/workflows/deploy.yml`) to automatically stage and deploy public assets (`index.html`, `style.css`, `main.js`, and `assets/`) to GitHub Pages upon push to `main`.
 
-## Contact behaviour
+In repository **Settings** → **Pages**, ensure the **Source** is set to **GitHub Actions**.
 
-The project brief opens the visitor's configured email app using a `mailto:` URL. This website does not receive or store submissions. Visitors must review and send the email themselves. A mail client is required; the direct email link and copy button provide alternatives. Keep briefs concise because mail-client URL limits vary.
+---
 
-## Deployment
+## Verified Project Showcase
 
-The workflow in `.github/workflows/deploy.yml` stages only the public HTML, CSS, JavaScript, and portrait. It deploys on pushes to `main` or manual dispatch. In repository Settings → Pages, the source must be **GitHub Actions**. GitHub Pages availability and deployment permissions remain controlled by GitHub and repository settings.
+1. **Production Web Platforms**:
+   - **CeylonDrive** ([ceylondrive.com](https://ceylondrive.com/)): Full-stack tourism & logistics platform (PHP 8.x MVC, MySQL, Node.js Socket.IO, Google Maps Distance Matrix, Telegram Webhooks, Gemini 1.5 Flash AI ads script, Oracle Cloud VPS).
+   - **BLACK SOUL** ([blacksoul.lk](https://blacksoul.lk/)): 3D streetwear storefront & persistent audio hub (Next.js 14 App Router, Three.js / React Three Fiber, Supabase PostgreSQL with RLS, PayHere Gateway, Sanity v4 CMS).
+   - **Vellora Fashion** ([vellorafashion.online](https://vellorafashion.online/)): Curated fashion e-commerce storefront (Next.js, React, Tailwind CSS, Vercel).
+   - **Ceylon C Tours** ([ceylonctours.netlify.app](https://ceylonctours.netlify.app/)): Chauffeur and tour fleet discovery presence.
+   - **3S 3D Engineering Service** ([3s3d.netlify.app](https://3s3d.netlify.app/)): Architectural BIM visualization and engineering studio portfolio.
 
-## Content and attribution
+2. **Systems, Security & Desktop Software**:
+   - **SecureFolder Locker**: Authenticated Windows folder encryption suite (.NET 8 LTS, C#, WPF MVVM, AES-256-GCM chunked encryption, Argon2id key derivation, write-through crash journaling, PathGuard safety).
+   - **OpenSearch Intelligence Engine (OSIE)**: Private hybrid search engine and autonomous research agent (FastAPI, React 18, BM25 Okapi inverted indexing, Ollama dense vector embeddings, Tor SOCKS5 circuit isolation).
+   - **Smart Home OS**: 100% local smart home automation ecosystem (Docker Compose, Home Assistant, Mosquitto MQTT, Node-RED, local Whisper/Piper/Ollama voice pipeline, Frigate NVR computer vision).
+   - **QuantOps Algorithmic Trading Engine**: Supervised quantitative crypto futures paper-trading platform (Python, Freqtrade, FreqAI, XGBoost/LightGBM walk-forward training, Docker).
+   - **Buddhist Organization Governance Platform (BOGP)**: Enterprise multi-tenant governance, double-entry fund accounting, and compliance system architecture.
 
-The gallery lists CeylonDrive, Black Soul, and Vellora Fashion as production sites, following the owner's declaration. Kasagala YBA, Ceylon C Tours, 3S 3D, and Facebook Post Scheduler are development previews. Images are real public homepage captures. No unverified revenue, conversion, credentials, or backend-security outcomes are claimed.
-
-The new site uses system fonts and locally stored project screenshots, without third-party runtime scripts, analytics, or remote font requests. Existing unused legacy assets remain in Git history and the repository but are not included in the deployment artifact. No blanket open-source licence has been added; rights in existing assets and third-party work remain with their respective owners.
+3. **Mobile & Pre-Release Systems**:
+   - **Kasagala Young Buddhist Association** ([kasagala-yba.vercel.app](https://kasagala-yba.vercel.app/)): Bilingual community governance, membership, and donation platform (TanStack Start SSR, TanStack Router, React 19, Tailwind CSS v4, PGlite WASM / Neon PostgreSQL).
+   - **Dhamma Quotes**: Offline-first Android AI image editor with on-device TensorFlow Lite DeepLabv3 saliency segmentation (Flutter, Dart, GPU delegate, Riverpod, sqflite).
+   - **Facebook Post Scheduler** ([facebookpostscheduler.vercel.app](https://facebookpostscheduler.vercel.app/)): Social media workflow automation and scheduling utility (Next.js, React).
