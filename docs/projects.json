@@ -4,112 +4,262 @@
     "name": "CeylonDrive",
     "url": "https://ceylondrive.com/",
     "status": "production",
-    "category": "Travel & transport",
+    "category": "Travel & Logistics Tech",
     "image": "ceylondrive-preview.jpg",
-    "description": "A Sri Lankan travel platform connecting visitors with private chauffeur services, airport transfers, tour guides, vehicles, and destination information.",
-    "features": "Tour and transfer discovery, fleet and guide listings, journey enquiry, and an itinerary-planning interface.",
+    "description": "Enterprise-grade tourism and chauffeur logistics platform for Sri Lanka, featuring dynamic route pricing, multi-day itinerary generation, real-time dispatch via WebSockets and Telegram, and automated Google Ads optimization.",
+    "features": "Dynamic airport transfer pricing engine via Google Maps Distance Matrix; custom multi-day itinerary generator; driver fleet discovery; instant automated dispatch alerts via Telegram Bot webhooks and WhatsApp Business; autonomous Google Ads script powered by Google Gemini 1.5 Flash AI for automated negative keyword mining and search term optimization.",
     "tech": [
-      "PHP routes",
-      "Bootstrap",
-      "jQuery",
-      "Google Maps"
+      "PHP 8.x MVC",
+      "MySQL / MariaDB",
+      "Node.js / Socket.IO",
+      "Google Maps API",
+      "Google Gemini AI",
+      "Telegram Webhooks",
+      "Bootstrap 5.3",
+      "Oracle Cloud VPS",
+      "Cloudflare"
     ],
-    "note": "Public pages expose PHP routes and load Bootstrap, jQuery, and Google Maps. Internal services and booking operations were not audited."
+    "note": "Live production platform deployed on Oracle Cloud VPS with Apache 2.4, Let's Encrypt SSL/TLS, and Cloudflare CDN. Verified 4.9★ Google Places API review sync."
   },
   {
     "id": "blacksoul",
-    "name": "Black Soul",
+    "name": "BLACK SOUL",
     "url": "https://blacksoul.lk/",
     "status": "production",
-    "category": "Streetwear & music",
+    "category": "Streetwear & Music E-Commerce",
     "image": "blacksoul-preview.jpg",
-    "description": "A distinctive streetwear and music storefront combining merchandise discovery with an artist-led brand experience.",
-    "features": "Featured clothing collections, shopping navigation, music presentation, and brand storytelling.",
+    "description": "Immersive direct-to-consumer streetwear storefront and music platform combining real-time 3D merchandise customization, persistent audio streaming, and multi-tier checkout.",
+    "features": "Interactive 3D merchandise customizer using React Three Fiber (@react-three/drei) and Three.js for 360° orbital product inspection and multi-zone decal placement; persistent Web Audio streaming player with animated frequency visualizers; hybrid checkout with PayHere gateway, Bank Deposit QR code generation, and slip verification; headless Sanity v4 Studio with GROQ queries; automated 25% profit-split reporting dashboard dedicated to verified community charity initiatives.",
     "tech": [
-      "Next.js",
-      "React",
+      "Next.js 14 App Router",
+      "React 18",
+      "TypeScript",
+      "Three.js / React Three Fiber",
+      "Supabase (PostgreSQL)",
+      "Sanity CMS",
+      "PayHere Gateway",
+      "Tailwind CSS",
+      "Zustand",
       "Vercel"
     ],
-    "note": "Next.js assets and hosting headers are visible on the public deployment. Database, payment provider, and internal architecture are not claimed."
+    "note": "Production e-commerce and media platform built for hip-hop artist YAZZY, combining apparel drops with continuous music streaming and charitable profit allocation."
   },
   {
     "id": "vellora",
     "name": "Vellora Fashion",
     "url": "https://vellorafashion.online/",
     "status": "production",
-    "category": "Fashion & lifestyle",
+    "category": "Fashion & Lifestyle",
     "image": "vellora-preview.jpg",
-    "description": "A fashion and lifestyle storefront with a curated visual identity spanning apparel, beauty, accessories, and editorial content.",
-    "features": "Collection discovery, catalog navigation, search entry, wishlist and shopping-bag interfaces.",
+    "description": "Modern fashion and lifestyle e-commerce storefront presenting curated apparel, beauty, and accessories collections with a responsive visual identity, intuitive catalog discovery, and smooth cart workflows.",
+    "features": "Dynamic collection discovery, faceted catalog search and navigation, wishlist management, and a streamlined shopping cart workflow.",
     "tech": [
       "Next.js",
       "React",
-      "Vercel"
+      "Tailwind CSS",
+      "Vercel",
+      "SSR",
+      "Responsive Design"
     ],
-    "note": "The public site serves Next.js assets. Store administration, checkout, and payment processing were not tested."
+    "note": "High-performance headless e-commerce frontend deployed on Vercel's global edge network, optimized for fast initial render and Core Web Vitals."
+  },
+  {
+    "id": "ceylonctours",
+    "name": "Ceylon C Tours",
+    "url": "https://ceylonctours.netlify.app/",
+    "status": "production",
+    "category": "Chauffeur & Tour Services",
+    "image": "ceylonctours-preview.jpg",
+    "description": "Professional chauffeur and travel services website showcasing vehicle fleet categories, popular Sri Lankan destination circuits, and direct ride enquiry channels.",
+    "features": "Fleet catalog highlighting vehicle capacities and luggage limits, curated Sri Lanka tour highlights, and clear WhatsApp and web-based ride enquiry routing.",
+    "tech": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Netlify",
+      "Mobile-Optimized"
+    ],
+    "note": "Client travel presence presenting vehicle categories, passenger capacities, and sightseeing itineraries with rapid customer enquiry turnaround."
+  },
+  {
+    "id": "3s3d",
+    "name": "3S 3D Engineering Service",
+    "url": "https://3s3d.netlify.app/",
+    "status": "production",
+    "category": "Architecture & 3D Engineering",
+    "image": "3s3d-preview.jpg",
+    "description": "Visual business website for an architectural visualization and engineering studio, highlighting 3D rendering capabilities, BIM services, and project consultations.",
+    "features": "High-resolution architectural project galleries, detailed breakdowns of architectural workflows, and structured enquiry intake for international clients.",
+    "tech": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Netlify",
+      "Project Portfolio"
+    ],
+    "note": "Client business platform showcasing architectural visualization, Building Information Modeling (BIM), and engineering consultation capabilities."
+  },
+  {
+    "id": "securefolder",
+    "name": "SecureFolder Locker",
+    "url": null,
+    "status": "systems",
+    "category": "Desktop Security & Cryptography",
+    "image": null,
+    "description": "Modern high-security Windows desktop folder encryption suite engineered with authenticated AES-256-GCM chunked encryption, Argon2id key derivation, and crash-resilient transaction journaling.",
+    "features": "True in-place authenticated encryption using AES-256-GCM in 64 KB chunks; Argon2id key derivation (64 MB, 4 iterations, 4 lanes); write-through transaction journal for automatic crash recovery; PathGuard safety engine preventing locking system paths; sub-second master password re-wrapping; single-file portable executable with zero network dependencies.",
+    "tech": [
+      "C#",
+      ".NET 8 LTS",
+      "WPF (MVVM)",
+      "AES-256-GCM",
+      "Argon2id",
+      "SQLite",
+      "PathGuard Safety",
+      "Zero-Knowledge"
+    ],
+    "note": "Standalone desktop security software engineered for Windows 10/11 x64, packaged as an offline portable executable with zero external cloud dependencies."
+  },
+  {
+    "id": "osie",
+    "name": "OpenSearch Intelligence Engine (OSIE)",
+    "url": null,
+    "status": "systems",
+    "category": "Information Retrieval & AI Agents",
+    "image": null,
+    "description": "Private hybrid search engine and autonomous research agent combining Robertson-Spärck Jones BM25 Okapi inverted indexing, dense vector embeddings, Tor circuit isolation, and multi-source dossier synthesis.",
+    "features": "Robertson-Spärck Jones BM25 Okapi inverted indexer with exact phrase boosting; subword LSA and Ollama dense vector embeddings (384-dim); hybrid score fusion; bounded crawler with SSRF mitigation; Tor onion crawling with DNS leak isolation via local SOCKS5 proxy; autonomous research agent synthesizing structured dossiers into Markdown, JSON, and CSV.",
+    "tech": [
+      "Python",
+      "FastAPI",
+      "React 18 / TypeScript",
+      "BM25 Okapi",
+      "Ollama Embeddings",
+      "Tor SOCKS5",
+      "SQLite WAL",
+      "NumPy"
+    ],
+    "note": "Internal research system and private intelligence engine engineered as a modular monolith with decoupled React TypeScript frontend."
+  },
+  {
+    "id": "smarthome",
+    "name": "Smart Home OS",
+    "url": null,
+    "status": "systems",
+    "category": "Edge AI & Home Automation",
+    "image": null,
+    "description": "Production-ready, 100% local smart home automation ecosystem with zero cloud dependencies, powered by Home Assistant, Mosquitto MQTT broker, Node-RED visual logic, local AI voice pipelines, and Frigate NVR computer vision.",
+    "features": "Modular Docker-based microservices architecture running locally from Raspberry Pi 4 to Intel NUC; local voice pipeline using Whisper (STT), Piper (TTS), and Ollama (LLM); Frigate NVR for hardware-accelerated computer vision object detection over RTSP; Zigbee2MQTT broker; Prometheus and Grafana telemetry.",
+    "tech": [
+      "Docker Compose",
+      "Home Assistant",
+      "Mosquitto MQTT",
+      "Node-RED",
+      "Frigate NVR",
+      "Whisper / Piper",
+      "Ollama",
+      "Zigbee2MQTT"
+    ],
+    "note": "Privacy-first local smart home platform delivering commercial-grade automation without third-party cloud lock-in."
+  },
+  {
+    "id": "quantops",
+    "name": "QuantOps Algorithmic Trading Engine",
+    "url": null,
+    "status": "systems",
+    "category": "Quantitative Finance & ML",
+    "image": null,
+    "description": "Automated quantitative crypto futures paper-trading platform integrating Freqtrade, FreqAI, CCXT exchange adapters, and machine learning models with walk-forward validation and strict risk guardrails.",
+    "features": "Containerized order execution and feature engineering pipeline using Freqtrade and FreqAI in Docker; walk-forward adaptive feature training using XGBoost and LightGBM across multi-timeframe OHLCV data; strictly enforced policy-driven risk controls with dry-run paper trading, capped balances, and automated trailing stop-losses; automated security scanners for configuration verification.",
+    "tech": [
+      "Python",
+      "Freqtrade",
+      "FreqAI",
+      "XGBoost",
+      "LightGBM",
+      "CCXT",
+      "Docker",
+      "Streamlit"
+    ],
+    "note": "Supervised algorithmic research platform operating strictly in paper-trading simulation with policy-driven execution controls."
+  },
+  {
+    "id": "bogp",
+    "name": "Buddhist Organization Governance Platform (BOGP)",
+    "url": null,
+    "status": "systems",
+    "category": "Multi-Tenant Governance & Ledger",
+    "image": null,
+    "description": "Comprehensive enterprise multi-tenant governance, double-entry fund accounting, and compliance system architecture designed for community institutions, temples, and humanitarian NGOs.",
+    "features": "Modular monolith specification with strict trust boundaries; rigorous segregation of duties enforced via server-side ABAC and PostgreSQL Row Level Security (RLS); tamper-evident audit trails; outbox pattern for reliable asynchronous workflows; multi-entity double-entry fund accounting ledger; restricted budget allocations; automated bank reconciliation matching; zero-leakage privacy guarantees.",
+    "tech": [
+      "PostgreSQL RLS",
+      "Multi-Tenant Architecture",
+      "Double-Entry Accounting",
+      "Domain-Driven Design",
+      "Audit Logging",
+      "ABAC"
+    ],
+    "note": "Enterprise systems architecture and governance specification designed to scale from single institutions to multi-branch networks."
   },
   {
     "id": "kasagala-yba",
     "name": "Kasagala Young Buddhist Association",
     "url": "https://kasagala-yba.vercel.app/",
     "status": "development",
-    "category": "Community & nonprofit",
+    "category": "Community Governance & Fundraising",
     "image": "kasagala-yba-preview.jpg",
-    "description": "A community website for the Kasagala Young Buddhist Association, presenting its mission, charitable activities, programmes, and ways to participate.",
-    "features": "Sinhala-led content, language choices, programme sections, membership entry points, and donation information.",
+    "description": "Bilingual (Sinhala/English) community management and humanitarian fundraising platform featuring member registration, verification workflows, project progress tracking, and multi-currency donation management.",
+    "features": "TanStack Start SSR with type-safe RPC server functions; TanStack Router file-based routing; React 19 concurrent rendering; dual database engine supporting embedded PGlite (WASM PostgreSQL) for local development and Neon PostgreSQL for cloud production; unique membership number assignment (KYBA-YYYY-XXXX); donation tracking with receipt verification; humanitarian project progress tracking; lightweight custom i18n engine with full Sinhala and English dictionaries.",
     "tech": [
-      "React",
-      "Vite",
-      "Vercel"
+      "TanStack Start (SSR)",
+      "TanStack Router",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "Radix UI",
+      "Better Auth",
+      "PGlite / Neon PostgreSQL"
     ],
-    "note": "React and Vite markers are present in the public bundle. This is a development preview; membership and donation workflows were not exercised."
+    "note": "Staged deployment for the Kasagala Youth Buddhist Association community and fundraising portal, currently in active rollout."
   },
   {
-    "id": "ceylonctours",
-    "name": "Ceylon C Tours",
-    "url": "https://ceylonctours.netlify.app/",
+    "id": "dhammaquotes",
+    "name": "Dhamma Quotes — Offline AI Image Editor",
+    "url": null,
     "status": "development",
-    "category": "Chauffeur & tour services",
-    "image": "ceylonctours-preview.jpg",
-    "description": "A chauffeur and car-rental website presenting Sri Lankan travel services, a vehicle fleet, and a clear path to ride enquiries.",
-    "features": "Fleet discovery, service information, tour navigation, and booking calls to action.",
+    "category": "Mobile & On-Device AI",
+    "image": null,
+    "description": "Offline-first Android AI image editor that intelligently overlays bilingual (Sinhala & English) Dhamma reflections on photos using on-device computer vision.",
+    "features": "On-device image analysis using a lightweight TensorFlow Lite DeepLabv3 semantic segmentation model to detect image composition and identify optimal safe zones for text placement; GPU delegate acceleration with background Dart isolates for asynchronous image processing; Riverpod state management; sqflite local persistence; bilingual ARB localization.",
     "tech": [
-      "Next.js",
-      "React",
-      "Netlify"
+      "Flutter",
+      "Dart",
+      "TensorFlow Lite",
+      "DeepLabv3",
+      "Riverpod",
+      "sqflite",
+      "GPU Delegate",
+      "Android NDK"
     ],
-    "note": "Next.js assets are visible on the Netlify preview. This is listed as development work, rather than a production booking service."
-  },
-  {
-    "id": "3s3d",
-    "name": "3S 3D Engineering Service",
-    "url": "https://3s3d.netlify.app/",
-    "status": "development",
-    "category": "Architecture & visualization",
-    "image": "3s3d-preview.jpg",
-    "description": "A visual business website for architectural visualization and engineering services, built around project presentation and enquiry.",
-    "features": "Architectural visualization, BIM and consultation service sections, a project gallery, and contact calls to action.",
-    "tech": [
-      "Next.js",
-      "React",
-      "Netlify"
-    ],
-    "note": "Next.js assets are visible in the public deployment. Architectural work, awards, and business claims belong to the showcased organization; they are not developer credentials."
+    "note": "Mobile application engineered for offline-first resilience with on-device computer vision and zero external cloud dependency."
   },
   {
     "id": "facebook-scheduler",
     "name": "Facebook Post Scheduler",
     "url": "https://facebookpostscheduler.vercel.app/",
     "status": "development",
-    "category": "Social media workflow",
+    "category": "Social Media Workflow",
     "image": "facebook-scheduler-preview.jpg",
-    "description": "A social media scheduling application in development, exploring a dashboard-led workflow for content planning and AI-assisted social tools.",
-    "features": "A public product overview and dashboard entry, presenting scheduling, analytics, and AI feature concepts.",
+    "description": "Multi-channel social media content management utility designed for calendar-based campaign planning, post queueing, and workflow automation.",
+    "features": "Visual scheduling calendar, post composition interface with rich media preview, queue management, and automated publishing workflow concepts.",
     "tech": [
       "Next.js",
       "React",
-      "Vercel"
+      "Tailwind CSS",
+      "Vercel",
+      "Workflow Tools"
     ],
-    "note": "Next.js assets are visible. Automated posting, AI services, analytics accuracy, Meta approval, and advertised security controls were not verified."
+    "note": "Beta utility exploring calendar-driven content scheduling and campaign planning workflows."
   }
 ]

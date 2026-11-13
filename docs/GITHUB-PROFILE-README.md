@@ -1,103 +1,83 @@
 # Geeth Namal
 
-**Web Developer · E-commerce Websites · Automation & AI Integrations**
+**Software Engineer & Systems Architect**  
+*Full-Stack Web · Desktop Cryptography & Systems · Local AI & Automation · Mobile*
 
-Based in Sri Lanka · Working remotely
+Based in Sri Lanka · Available for global technical engagements
 
-I build websites and practical digital tools for businesses and community organizations. My work includes travel and chauffeur platforms, fashion storefronts, nonprofit websites, and applications in development.
+[Portfolio Website](https://gnsa171.github.io/Portfolio/) · [Direct Email](mailto:dkgnsa171@gmail.com)
 
-[Portfolio](https://gnsa171.github.io/Portfolio/) · [Discuss a project](mailto:dkgnsa171@gmail.com)
+---
 
-## Production websites
+## 🚀 About Me
 
-### [CeylonDrive](https://ceylondrive.com/)
+I design and engineer production web platforms, high-assurance desktop security software, local AI systems, and resilient digital architectures. My work spans high-traffic chauffeur logistics platforms, 3D streetwear e-commerce, authenticated AES-256 encrypted desktop vaults, and private hybrid search engines.
 
+---
+
+## 🛠️ Featured Production Platforms
+
+### [CeylonDrive](https://ceylondrive.com/) — Tourism & Chauffeur Logistics Platform
 [![CeylonDrive homepage preview](assets/previews/ceylondrive-preview.jpg)](https://ceylondrive.com/)
+- **Architecture**: PHP 8.x MVC backend with PDO prepared statements, Node.js Socket.IO real-time chat microservice, MySQL relational data model, Oracle Cloud VPS deployment with Cloudflare.
+- **Key Features**: Dynamic airport transfer pricing engine via Google Maps Distance Matrix, multi-day itinerary planner, driver fleet discovery, real-time dispatch alerts via Telegram Bot API and WhatsApp Business, and an autonomous Google Ads script powered by Google Gemini 1.5 Flash AI.
+- **Rating**: Verified 4.9★ Google Places API review sync.
 
-A Sri Lankan travel platform connecting visitors with private chauffeur services, airport transfers, tour guides, vehicles, and destination information.
+---
 
-**Visible technology:** PHP routes, Bootstrap, jQuery, Google Maps.
-
-### [Black Soul](https://blacksoul.lk/)
-
+### [BLACK SOUL](https://blacksoul.lk/) — 3D Streetwear E-Commerce & Music Hub
 [![Black Soul homepage preview](assets/previews/blacksoul-preview.jpg)](https://blacksoul.lk/)
+- **Architecture**: Next.js 14 App Router, React 18, TypeScript, Supabase (PostgreSQL with Row Level Security), Sanity v4 Headless CMS Studio with GROQ, Vercel deployment.
+- **Key Features**: Interactive 3D merchandise customizer using React Three Fiber (@react-three/drei) and Three.js with multi-zone decal placement; persistent Web Audio streaming player with reactive frequency visualizers; hybrid checkout with PayHere gateway, Bank Deposit QR slip verification, and automated 25% profit-split reporting dedicated to verified community charities.
 
-A distinctive streetwear and music storefront combining merchandise discovery with an artist-led brand experience.
+---
 
-**Visible technology:** Next.js, React, Vercel.
-
-### [Vellora Fashion](https://vellorafashion.online/)
-
+### [Vellora Fashion](https://vellorafashion.online/) — Curated E-Commerce Storefront
 [![Vellora Fashion homepage preview](assets/previews/vellora-preview.jpg)](https://vellorafashion.online/)
+- **Architecture**: Next.js, React, Tailwind CSS, Vercel Edge Network.
+- **Key Features**: Dynamic catalog discovery, faceted filtering, wishlist workflows, and high-performance server-side rendering for optimal Core Web Vitals.
 
-A fashion and lifestyle storefront with a curated visual identity spanning apparel, beauty, accessories, and editorial content.
+---
 
-**Visible technology:** Next.js, React, Vercel.
+## 🔒 Systems, Security & Desktop Software
 
-## In development
+### SecureFolder Locker — Windows Authenticated Encryption Suite
+- **Architecture**: C#, .NET 8 LTS, WPF (MVVM Architecture), SQLite write-through transaction journal.
+- **Security Engineering**: True in-place authenticated encryption using AES-256-GCM in 64 KB chunks; memory-hard Argon2id key derivation (64 MB, 4 iterations, 4 lanes); crash recovery journaling; PathGuard filesystem safety engine preventing locking critical system directories; 100% offline portable single-file executable.
 
-These are public development previews, separate from my production work.
+### OpenSearch Intelligence Engine (OSIE) — Private Hybrid Search & Agents
+- **Architecture**: FastAPI (Python), React 18 / TypeScript, BM25 Okapi inverted indexing, SQLite WAL.
+- **Information Retrieval**: Dual-representation retrieval fusing full-text BM25 Okapi with 384-dimensional dense neural embeddings (subword LSA + Ollama). Features SSRF validation, Tor SOCKS5 circuit isolation for onion crawling, and autonomous research dossier synthesis.
 
-| Project | Focus | Visible technology / hosting |
-| --- | --- | --- |
-| [Kasagala Young Buddhist Association](https://kasagala-yba.vercel.app/) | Community & nonprofit | React, Vite, Vercel |
-| [Ceylon C Tours](https://ceylonctours.netlify.app/) | Chauffeur & tour services | Next.js, React, Netlify |
-| [3S 3D Engineering Service](https://3s3d.netlify.app/) | Architecture & visualization | Next.js, React, Netlify |
-| [Facebook Post Scheduler](https://facebookpostscheduler.vercel.app/) | Social media workflow | Next.js, React, Vercel |
+### Smart Home OS — 100% Local Privacy-First Automation Platform
+- **Architecture**: Docker Compose microservices stack, Home Assistant, Mosquitto MQTT, Node-RED visual logic.
+- **Edge AI & Computer Vision**: Local AI voice pipeline using Whisper (STT), Piper (TTS), and Ollama (LLM). Hardware-accelerated real-time computer vision object detection via Frigate NVR over RTSP cameras.
 
-<details>
-<summary>Explore development previews</summary>
+---
 
-### Kasagala Young Buddhist Association
+## 📱 Mobile & Pre-Release Systems
 
-[![Kasagala Young Buddhist Association homepage preview](assets/previews/kasagala-yba-preview.jpg)](https://kasagala-yba.vercel.app/)
+### [Kasagala Young Buddhist Association](https://kasagala-yba.vercel.app/) — Community Governance Portal
+[![Kasagala YBA preview](assets/previews/kasagala-yba-preview.jpg)](https://kasagala-yba.vercel.app/)
+- **Architecture**: Full-stack TanStack Start (SSR), TanStack Router, React 19, Tailwind CSS v4, Radix UI, Better Auth, Dual Database strategy (PGlite local WASM / Neon PostgreSQL cloud).
+- **Features**: Bilingual (Sinhala/English) interface, membership management with official ID generation (`KYBA-YYYY-XXXX`), multi-currency donation tracking, and humanitarian project progress meters.
 
-A community website for the Kasagala Young Buddhist Association, presenting its mission, charitable activities, programmes, and ways to participate.
+### Dhamma Quotes — Offline AI Image Editor (Mobile)
+- **Architecture**: Flutter, Dart, TensorFlow Lite, Riverpod, sqflite, Android NDK.
+- **Features**: On-device semantic segmentation with TFLite DeepLabv3 (GPU delegate) to detect image composition and identify safe text zones for Dhamma quotes without cloud dependencies.
 
-### Ceylon C Tours
+### [Ceylon C Tours](https://ceylonctours.netlify.app/) & [3S 3D Engineering Service](https://3s3d.netlify.app/)
+- Responsive client web presences built with Next.js, React, and Tailwind CSS for fleet management and architectural BIM visualization.
 
-[![Ceylon C Tours homepage preview](assets/previews/ceylonctours-preview.jpg)](https://ceylonctours.netlify.app/)
+---
 
-A chauffeur and car-rental website presenting Sri Lankan travel services, a vehicle fleet, and a clear path to ride enquiries.
+## 💻 Technical Stack
 
-### 3S 3D Engineering Service
-
-[![3S 3D Engineering Service homepage preview](assets/previews/3s3d-preview.jpg)](https://3s3d.netlify.app/)
-
-A visual business website for architectural visualization and engineering services, built around project presentation and enquiry.
-
-### Facebook Post Scheduler
-
-[![Facebook Post Scheduler homepage preview](assets/previews/facebook-scheduler-preview.jpg)](https://facebookpostscheduler.vercel.app/)
-
-A social media scheduling application in development, exploring a dashboard-led workflow for content planning and AI-assisted social tools.
-
-</details>
-
-Additional projects remain in private repositories and have not been publicly launched. Their source and unreleased details are not published here.
-
-## What I can help with
-
-- **Business websites:** responsive sites and interfaces tailored to a brand and its audience.
-- **E-commerce experiences:** storefronts, product presentation, and shopping interfaces.
-- **Automation:** focused Python utilities, file processing, document generation, and API integrations.
-- **AI prototypes:** bounded LLM integrations and local AI workflows.
-- **Existing applications:** scoped interface improvements, debugging, and maintenance.
-
-## Tools & interests
-
-**Web:** HTML, CSS, JavaScript, TypeScript, React, Next.js, PHP, Bootstrap
-
-**Automation & development:** Python, Git, GitHub, API integrations
-
-**Deployment experience:** Vercel, Netlify, GitHub Pages
-
-**Current interests:** local LLMs, AI-assisted developer tools, and practical workflow automation
-
-## Working together
-
-I start by understanding the problem, defining the scope, and agreeing on deliverables. Send your goal, current website or tools, timeline, and budget range to [dkgnsa171@gmail.com](mailto:dkgnsa171@gmail.com).
-
-[View portfolio](https://gnsa171.github.io/Portfolio/) · [Public repositories](https://github.com/GNSA171?tab=repositories)
-
-<sub>Previews captured October 28, 2026. Technology labels describe publicly visible framework, asset, route, or hosting signals; private backend details and development feature claims are not independently audited.</sub>
+```text
+Languages:    TypeScript · JavaScript · Python · C# (.NET 8) · PHP 8.x · Dart · SQL
+Frontend:     Next.js 14 · React 18/19 · TanStack Start · Tailwind CSS · Three.js / R3F
+Backend:      Node.js · FastAPI · PHP MVC · Supabase (PostgreSQL) · MySQL · SQLite WAL
+Security:     AES-256-GCM · Argon2id · PostgreSQL RLS · Tor SOCKS5 · Zero-Knowledge
+AI & Edge:    Ollama (Local LLMs) · Whisper · Piper · TensorFlow Lite · Frigate NVR
+DevOps:       Docker · Oracle Cloud VPS · Vercel · Netlify · Cloudflare · GitHub Actions
+```
